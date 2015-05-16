@@ -1,35 +1,19 @@
-.header-v2.header-sticky
-  .container.container-space
-    .topbar-v2
-      .row
-        .col-sm-8
-          ul.list-inline.top-v2-contacts
-            li
-              ' Email:
-              =mail_to HH_CONFIG['email']
-            li
-              ' Ring til os:
-              =HH_CONFIG['phone_no']
-        .col-sm-4
-          .topbar-buttons.pull-right
-            a.btn-u.btn-brd.btn-brd-hover.btn-u-light.margin-right-5[href="page_login.html"]
-              | Log ind
-            a.btn-u[href="page_registration.html"]
-              | Book rengøring
-  .navbar.navbar-default.mega-menu[role="navigation"]
-    .container.container-space
-      .navbar-header
-        button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"]
-          span.sr-only
-            | Toggle navigation
-          span.fa.fa-bars
-        a.navbar-brand.brand-style[href="index.html"]
-          img#logo-header[src="assets/logo1-default.png" width="85" height="32" alt="Logo"]
-      .collapse.navbar-collapse.navbar-responsive-collapse
-        ul.nav.navbar-nav
-          li
-            =link_to 'Hjem', '#'
-          li
-            =link_to 'Book rengøring', '#'
-          li
-            =link_to 'Om os', '#'
+.header
+  .container
+    a.logo[href="index.html"]
+      =image_tag 'logo1-default.png'
+    button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"]
+      span.sr-only
+        | Toggle navigation
+      span.fa.fa-bars
+  .collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
+    .container
+      ul.nav.navbar-nav
+        li.active
+          =link_to 'Hjem', root_path
+        li
+          =link_to 'Book rengøring', new_booking_path
+        li
+          =link_to 'Om os', '#'
+        li
+          =link_to 'Login', '#'

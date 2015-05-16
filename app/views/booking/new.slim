@@ -1,0 +1,258 @@
+.container.content
+  .col-md-6
+    .profile-body.margin-bottom-20
+      .tab-v1
+        ul.nav.nav-justified.nav-tabs
+          li.active
+            a[data-toggle="tab" href="#profile"]
+              | Edit Profile
+          li
+            a[data-toggle="tab" href="#passwordTab"]
+              | Change Password
+          li
+            a[data-toggle="tab" href="#payment"]
+              | Payment Options
+          li
+            a[data-toggle="tab" href="#settings"]
+              | Notification Settings
+        .tab-content
+          #profile.profile-edit.tab-pane.fade.in.active
+            h2.heading-md
+              | Manage your Name, ID and Email Addresses.
+            p
+              | Below are the name and email addresses on file for your account.
+            br
+            dl.dl-horizontal
+              dt
+                strong
+                  | Your name
+              dd
+                |  Edward Rooster
+                span
+                  a.pull-right[href="#"]
+                    i.fa.fa-pencil
+            hr
+            dt
+              strong
+                | Your ID
+            dd
+              |  FKJ-032440
+              span
+                a.pull-right[href="#"]
+                  i.fa.fa-pencil
+            hr
+            dt
+              strong
+                | Company name
+            dd
+              |  Htmlstream
+              span
+                a.pull-right[href="#"]
+                  i.fa.fa-pencil
+            hr
+            dt
+              strong
+                | Primary Email Address
+            dd
+              |  edward-rooster@gmail.com
+              span
+                a.pull-right[href="#"]
+                  i.fa.fa-pencil
+            hr
+            dt
+              strong
+                | Phone Number
+            dd
+              |  (304) 33-2867-499
+              span
+                a.pull-right[href="#"]
+                  i.fa.fa-pencil
+            hr
+            dt
+              strong
+                | Office Number
+            dd
+              |  (304) 44-9810-296
+              span
+                a.pull-right[href="#"]
+                  i.fa.fa-pencil
+            hr
+            dt
+              strong
+                | Address
+            dd
+              |  California, US
+              span
+                a.pull-right[href="#"]
+                  i.fa.fa-pencil
+            hr
+            button.btn-u.btn-u-default[type="button"]
+              | Cancel
+            button.btn-u[type="button"]
+              | Save Changes
+          #passwordTab.profile-edit.tab-pane.fade
+            h2.heading-md
+              | Manage your Security Settings
+            p
+              | Change your password.
+            br
+            form#sky-form4.sky-form[action="#" novalidate="novalidate"]
+              dl.dl-horizontal
+                dt
+                  | Username
+                dd
+                  section
+                    label.input
+                      i.icon-append.fa.fa-user
+                      input[type="text" placeholder="Username" name="username"]
+                      b.tooltip.tooltip-bottom-right
+                        | Needed to enter the website
+                dt
+                  | Email address
+                dd
+                  section
+                    label.input
+                      i.icon-append.fa.fa-envelope
+                      input[type="email" placeholder="Email address" name="email"]
+                      b.tooltip.tooltip-bottom-right
+                        | Needed to verify your account
+                dt
+                  | Enter your password
+                dd
+                  section
+                    label.input
+                      i.icon-append.fa.fa-lock
+                      input#password[type="password" name="password" placeholder="Password"]
+                      b.tooltip.tooltip-bottom-right
+                        | Don't forget your password
+                dt
+                  | Confirm Password
+                dd
+                  section
+                    label.input
+                      i.icon-append.fa.fa-lock
+                      input[type="password" name="passwordConfirm" placeholder="Confirm password"]
+                      b.tooltip.tooltip-bottom-right
+                        | Don't forget your password
+              label.toggle.toggle-change
+                input[type="checkbox" checked="" name="checkbox-toggle-1"]
+                i
+                | Remember password
+              br
+              section
+                label.checkbox
+                  input#terms[type="checkbox" name="terms"]
+                  i
+                  a[href="#"]
+                    | I agree with the Terms and Conditions
+              button.btn-u.btn-u-default[type="button"]
+                | Cancel
+              button.btn-u[type="submit"]
+                | Save Changes
+          #payment.profile-edit.tab-pane.fade
+            h2.heading-md
+              | Manage your Payment Settings
+            p
+              | Below are the payment options for your account.
+            br
+            form#sky-form.sky-form[action="#" novalidate="novalidate"]
+              section
+                .inline-group
+                  label.radio
+                    input[type="radio" checked="" name="radio-inline"]
+                    i.rounded-x
+                    | Visa
+                  label.radio
+                    input[type="radio" name="radio-inline"]
+                    i.rounded-x
+                    | MasterCard
+                  label.radio
+                    input[type="radio" name="radio-inline"]
+                    i.rounded-x
+                    | PayPal
+              section
+                label.input
+                  input[type="text" name="name" placeholder="Name on card"]
+              .row
+                section.col.col-10
+                  label.input
+                    input#card[type="text" name="card" placeholder="Card number"]
+                section.col.col-2
+                  label.input
+                    input#cvv[type="text" name="cvv" placeholder="CVV2"]
+              .row
+                label.label.col.col-4
+                  | Expiration date
+                section.col.col-5
+                  label.select
+                    select[name="month"]
+                      option[disabled="" selected="" value="0"]
+                        | Month
+                      option[value="1"]
+                        | January
+                      option[value="1"]
+                        | February
+                      option[value="3"]
+                        | March
+                      option[value="4"]
+                        | April
+                      option[value="5"]
+                        | May
+                      option[value="6"]
+                        | June
+                      option[value="7"]
+                        | July
+                      option[value="8"]
+                        | August
+                      option[value="9"]
+                        | September
+                      option[value="10"]
+                        | October
+                      option[value="11"]
+                        | November
+                      option[value="12"]
+                        | December
+                    i
+                section.col.col-3
+                  label.input
+                    input#year[type="text" placeholder="Year" name="year"]
+              button.btn-u.btn-u-default[type="button"]
+                | Cancel
+              button.btn-u[type="submit"]
+                | Save Changes
+          #settings.profile-edit.tab-pane.fade
+            h2.heading-md
+              | Manage your Notifications.
+            p
+              | Below are the notifications you may manage.
+            br
+            form#sky-form3.sky-form[action="#"]
+              label.toggle
+                input[type="checkbox" checked="" name="checkbox-toggle-1"]
+                i
+                | Email notification
+              hr
+              label.toggle
+                input[type="checkbox" checked="" name="checkbox-toggle-1"]
+                i
+                | Send me email notification when a user comments on my blog
+              hr
+              label.toggle
+                input[type="checkbox" checked="" name="checkbox-toggle-1"]
+                i
+                | Send me email notification for the latest update
+              hr
+              label.toggle
+                input[type="checkbox" checked="" name="checkbox-toggle-1"]
+                i
+                | Send me email notification when a user sends me message
+              hr
+              label.toggle
+                input[type="checkbox" checked="" name="checkbox-toggle-1"]
+                i
+                | Receive our monthly newsletter
+              hr
+              button.btn-u.btn-u-default[type="button"]
+                | Reset
+              button.btn-u[type="submit"]
+                | Save Changes
