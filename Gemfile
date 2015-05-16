@@ -12,7 +12,7 @@ gem 'simple_form', '3.1.0.rc2'
 
 
 group :assets do
-  gem 'sass-rails', '5.0.1'
+  gem 'sass-rails', '5.0.3'
   gem 'coffee-rails', '4.1.0'
   gem 'uglifier', '=2.7.0'
 end
