@@ -1,0 +1,14 @@
+da:
+  production:
+    domain: boligsurf.dk
+  staging:
+    domain: s1.boligsurf.dk
+  development:
+    domain: localhost.boligsurf.dk:3000
+  test:
+    domain: localhost.boligsurf.dk:3000
+
+  phone_no: 2670 3870
+  email: hello@homehero.dk
+  address: Theklavej 11
+  zip: 2400 København NV

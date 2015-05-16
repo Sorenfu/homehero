@@ -1,0 +1,71 @@
+.footer-v1
+  .footer
+    .container
+      .row
+        .col-md-3.md-margin-bottom-40
+          a[href="index.html"]
+            img#logo-footer.footer-logo[src="assets/logo2-default.png" alt=""]
+          p
+            | About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.
+          p
+            | Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.
+        .col-md-3.md-margin-bottom-40
+          .posts
+            .headline
+              h2
+                | Latest Posts
+            ul.list-unstyled.latest-list
+              li
+                a[href="#"]
+                  | Incredible content
+                small
+                  | May 8, 2014
+              li
+                a[href="#"]
+                  | Best shoots
+                small
+                  | June 23, 2014
+              li
+                a[href="#"]
+                  | New Terms and Conditions
+                small
+                  | September 15, 2014
+        .col-md-3.md-margin-bottom-40
+          .headline
+            h2
+              | Useful Links
+          ul.list-unstyled.link-list
+            li
+              a[href="#"]
+                | About us
+              i.fa.fa-angle-right
+            li
+              a[href="#"]
+                | Portfolio
+              i.fa.fa-angle-right
+            li
+              a[href="#"]
+                | Latest jobs
+              i.fa.fa-angle-right
+            li
+              a[href="#"]
+                | Community
+              i.fa.fa-angle-right
+            li
+              a[href="#"]
+                | Contact us
+              i.fa.fa-angle-right
+        .col-md-3.map-img.md-margin-bottom-40
+          .headline
+            h2
+              | Kontakt os
+          address.md-margin-bottom-40
+            =HH_CONFIG['address']
+            br
+            =HH_CONFIG['zip']
+            br
+            ' Telefon:
+            =HH_CONFIG['phone_no']
+            br
+            ' Email:
+            =mail_to HH_CONFIG['email']
