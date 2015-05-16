@@ -12,7 +12,7 @@ class CreateBookings < ActiveRecord::Migration
       t.string :email
       t.string :password
       t.string :phone
-      t.timestamp :date
+      t.timestamp :start_date
 
       t.timestamps
     end

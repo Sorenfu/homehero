@@ -1,7 +1,7 @@
 .container.content
   .row
     h1 Book rengøring
-    .col-md-10
+    .col-md-8
       .tab-v1
         ul.nav.nav-tabs
           li
@@ -10,27 +10,33 @@
             =link_to 'Adresse', '#address', :'data-toggle' => 'tab'
           li.active
             =link_to 'Tid og dato', '#date', :'data-toggle' => 'tab'
-        = simple_form_for(@booking, html: {class: 'form-horizontal'}) do |f|
-            .tab-content
-              #your_home.tab-pane.fade.in
-                = field_set_tag 'Dit hjem'
-                  = f.input :rooms, collection: (1..5).map { |x| "#{x==5 ? '5+' : x} #{x==1 ? 'Soveværelse' : 'Soveværelser'}" }, prompt: nil
-                  = f.input :bathrooms, collection: (1..5).map { |x| "#{x==5 ? '5+' : x} #{x==1 ? 'Badeværelse' : 'Badeværelser'}" }, prompt: nil
-                = field_set_tag 'Tid afsat til rengøring'
-                  = f.input :set_time, collection: (4..30).map{|x| "#{x/2.0} timer"}
-              #address.tab-pane.fade.in
-                = field_set_tag 'Adresse'
-                  = f.input :street
-                  = f.input :zip, as: :string
-                  = f.input :house_number
-                = field_set_tag 'Dine kontakt informationer'
-                  = f.input :name
-                  = f.input :email
-                  = f.input :phone
-              #date.tab-pane.fade.in.active
-                = field_set_tag 'Vælg dato og tid'
-                  = f.input :rooms, collection: ['En gang'] + (1..4).map{|x| "Hver #{x.to_s + '.' if x > 1} uge"}, prompt: nil
-                  = f.input :rooms, as: :datepicker
+        = simple_form_for @booking do |f|
+          .tab-content
+            #your_home.tab-pane.fade.in
+              = field_set_tag 'Dit hjem'
+                = f.input :rooms, collection: (1..5).map { |x| "#{x==5 ? '5+' : x} #{x==1 ? 'Soveværelse' : 'Soveværelser'}" }, prompt: nil
+                = f.input :bathrooms, collection: (1..5).map { |x| "#{x==5 ? '5+' : x} #{x==1 ? 'Badeværelse' : 'Badeværelser'}" }, prompt: nil
+              = field_set_tag 'Tid afsat til rengøring'
+                = f.input :set_time, collection: (4..30).map { |x| "#{x/2.0} timer" }
+            #address.tab-pane.fade.in
+              = field_set_tag 'Adresse'
+                = f.input :street
+                = f.input :zip, as: :string
+                = f.input :house_number
+              = field_set_tag 'Dine kontakt informationer'
+                = f.input :name
+                = f.input :email
+                = f.input :phone
+            #date.tab-pane.fade.in.active
+              = field_set_tag 'Vælg dato og tid'
+                = f.input :rooms, collection: ['En gang'] + (1..4).map { |x| "Hver #{x.to_s + '.' if x > 1} uge" }, prompt: nil
+                = f.input :start_date, as: :datepicker
+                = f.label :select_time
+                br
+                - 17.times.map do |x|
+                  - time = Time.new(2015, 1, 1, 7) + 30.minutes * x
+                  .btn.btn-default.btn
+                    = time.strftime('%H:%M')
     .col-md-2
       .service-block.service-block-default
         i.icon-custom.icon-color-dark.rounded-x.fa.fa-lightbulb-o
