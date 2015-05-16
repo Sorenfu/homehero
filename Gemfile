@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'spring',        group: :development
 gem 'slim-rails'
+gem 'simple_form', '3.1.0.rc2'
 
 
 group :assets do
