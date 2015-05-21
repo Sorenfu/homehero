@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'spring',        group: :development
 gem 'slim-rails'
 gem 'simple_form', '3.1.0.rc2'
+gem 'newrelic_rpm'
 
 
 group :assets do

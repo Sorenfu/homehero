@@ -1,2 +1,13 @@
 da:
-  hello: "Hello world"
+  simple_form:
+    labels:
+      booking:
+        rooms: Antal soveværelser
+        bathrooms: Antal badeværelser
+        street: Gade
+        zip: Postnummer
+        house_number: Husnummer
+        name: Navn
+        email: Email
+        phone: Mobiltelefon
+        start_date: Vælg dag

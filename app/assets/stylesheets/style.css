@@ -9,6 +9,7 @@
 body {
     color: #333;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 body.header-fixed-space {
