@@ -11,3 +11,5 @@ da:
         email: Email
         phone: Mobiltelefon
         start_date: Vælg dag
+        repeat: Gentag rengøring
+        set_time: Rengørings tid

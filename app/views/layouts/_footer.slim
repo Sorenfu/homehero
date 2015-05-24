@@ -2,59 +2,28 @@
   .footer
     .container
       .row
-        .col-md-3.md-margin-bottom-40
+        .col-md-4.md-margin-bottom-40
           =link_to root_path
-            =image_tag 'logo2-default.png', class: 'footer-logo'
+            =image_tag 'logo-white.png', class: 'footer-logo'
           p Hos Homehero er vores mission at give dig mere tid i hverdagen.
-          p
-            | Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.
-        .col-md-3.md-margin-bottom-40
-          .posts
-            .headline
-              h2
-                | Latest Posts
-            ul.list-unstyled.latest-list
-              li
-                a[href="#"]
-                  | Incredible content
-                small
-                  | May 8, 2014
-              li
-                a[href="#"]
-                  | Best shoots
-                small
-                  | June 23, 2014
-              li
-                a[href="#"]
-                  | New Terms and Conditions
-                small
-                  | September 15, 2014
-        .col-md-3.md-margin-bottom-40
+          p Lad os klare rengøring for dig, og få tid til de vigtige ting i dit liv.
+        .col-md-4.md-margin-bottom-40
           .headline
-            h2
-              | Useful Links
+            h2  Menu
           ul.list-unstyled.link-list
             li
-              a[href="#"]
-                | About us
+              =link_to 'Hjem', root_path
               i.fa.fa-angle-right
             li
-              a[href="#"]
-                | Portfolio
+              =link_to 'Book rengøring', new_booking_path
               i.fa.fa-angle-right
             li
-              a[href="#"]
-                | Latest jobs
+              =link_to 'Om os', '#'
               i.fa.fa-angle-right
             li
-              a[href="#"]
-                | Community
+              =link_to 'Login', '#'
               i.fa.fa-angle-right
-            li
-              a[href="#"]
-                | Contact us
-              i.fa.fa-angle-right
-        .col-md-3.map-img.md-margin-bottom-40
+        .col-md-4.map-img.md-margin-bottom-40
           .headline
             h2
               | Kontakt os

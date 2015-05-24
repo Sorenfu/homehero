@@ -17,7 +17,9 @@
                 = f.input :rooms, collection: (1..5).map { |x| "#{x==5 ? '5+' : x} #{x==1 ? 'Soveværelse' : 'Soveværelser'}" }, prompt: nil
                 = f.input :bathrooms, collection: (1..5).map { |x| "#{x==5 ? '5+' : x} #{x==1 ? 'Badeværelse' : 'Badeværelser'}" }, prompt: nil
               = field_set_tag 'Tid afsat til rengøring'
-                = f.input :set_time, collection: (4..30).map { |x| "#{x/2.0} timer" }
+                = f.input :set_time, collection: (4..24).map { |x| "#{x/2.0} timer" }
+              hr
+                =link_to 'Næste', '#address', :'data-toggle' => 'tab', class: 'btn-u btn-u-blue btn-block btn-xl'
             #address.tab-pane.fade.in
               = field_set_tag 'Adresse'
                 = f.input :street
@@ -27,16 +29,23 @@
                 = f.input :name
                 = f.input :email
                 = f.input :phone
+              hr
+                button.btn-u.btn-u-blue.btn-block.btn-xl Næste
             #date.tab-pane.fade.in.active
               = field_set_tag 'Vælg dato og tid'
-                = f.input :rooms, collection: ['En gang'] + (1..4).map { |x| "Hver #{x.to_s + '.' if x > 1} uge" }, prompt: nil
+                = f.input :repeat, collection: ['En gang'] + (1..4).map { |x| "Hver #{x.to_s + '.' if x > 1} uge" }, prompt: nil
                 = f.input :start_date, as: :datepicker
                 = f.label :select_time
                 br
-                - 17.times.map do |x|
-                  - time = Time.new(2015, 1, 1, 7) + 30.minutes * x
-                  .btn.btn-default.btn
-                    = time.strftime('%H:%M')
+                .select-time data-toggle="buttons"
+                  - 17.times.map do |x|
+                    - start_hour = 7
+                    - time = Time.new(2015, 1, 1, start_hour) + 30.minutes * x
+                    label.btn.btn-default.btn type="button"
+                      = radio_button_tag time.strftime('%H:%M'), time.strftime('%H:%M')
+                      = time.strftime('%H:%M')
+                hr
+                  = f.submit class: 'btn-u btn-u-blue btn-block btn-xl'
     .col-md-2
       .service-block.service-block-default
         i.icon-custom.icon-color-dark.rounded-x.fa.fa-lightbulb-o

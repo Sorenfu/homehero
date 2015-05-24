@@ -19,4 +19,6 @@
  *= require header-default
  *= require font-awesome
  *= require bootstrap-datepicker3
+
+ *= require bookings
  */
