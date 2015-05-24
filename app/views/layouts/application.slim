@@ -14,10 +14,12 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    =render 'layouts/analytics'
     =render 'layouts/navbar'
     div class="#{controller_name}-wrapper #{controller.action_name}-wrapper"
       = yield
     =render 'layouts/footer'
+    =content_for :end_extra
 
 
       /meta[charset="utf-8"]

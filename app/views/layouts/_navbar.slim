@@ -2,18 +2,18 @@
   .container
     =link_to root_path, class: 'logo'
       =image_tag 'logo1-default.png'
-    button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"]
-      span.sr-only
-        | Toggle navigation
-      span.fa.fa-bars
+  /  button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"]
+  /    span.sr-only
+  /      | Toggle navigation
+  /    span.fa.fa-bars
   .collapse.navbar-collapse.mega-menu.navbar-responsive-collapse
     .container
       ul.nav.navbar-nav
         li.active
           =link_to 'Hjem', root_path
-        li
-          =link_to 'Book rengøring', new_booking_path
-        li
-          =link_to 'Om os', '#'
-        li
-          =link_to 'Login', '#'
+  /      li
+  /        =link_to 'Book rengøring', new_booking_path
+  /      li
+  /        =link_to 'Om os', '#'
+  /      li
+  /        =link_to 'Login', '#'

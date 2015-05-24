@@ -1,3 +1,28 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.welcome-wrapper {
+  &.index-wrapper {
+    .perk-icons i {
+      height: 110px;
+      width: 110px;
+      line-height: 110px;
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+    .btn-u-blue {
+      border-radius: 4px;
+    }
+    input {
+      font-size: 18px;
+      height: 45px;
+    }
+    input.btn-u{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .form-success{
+      opacity: 0;
+    }
+  }
+}

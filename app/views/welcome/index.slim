@@ -3,30 +3,38 @@
     .container
       h1 Kom glad hjem
       p Lad os klare rengøringen for dig, brug tiden på det du brænder for, og kom hjem til et rent hjem.
+      hr
+      p Vi går i luften i juni 2015. Få besked når vi starter i dit område, og få 25% rabat på din første rengøring.
+      = form_tag pre_signup_path, method: :post, class: 'form-inline preform', remote: true
+        .form-group
+          input.form-control type="email" placeholder="Email" required="required" name="email"
+        .form-group
+          input.form-control type="text" placeholder="Postnummer" required="required" name="zip_code"
+        .form-group
+          input.btn-u.btn-u-blue type="submit" value="Send"
+      .form-success
+        p Tak for din tilmelding, vi giver dig besked når vi går i luften i dit område.
   .content-md
-    .container
+    .container.perk-icons
       .row.text-center.margin-bottom-60
         .col-md-4.md-margin-bottom-50
-          =image_tag 'icons/flat/01.png', class: 'image-md margin-bottom-20'
+          i.icon-custom.icon-lg.icon-bg-blue.fa.fa-calendar.rounded-x
           h1.title-v3-md.margin-bottom-10 Book
-          p Book en hero online, du vælger den selv dato og tid, der passer dig.
+          p Book en hero online, du vælger den selv dato og tid, der passer dig. Du kan selvfølgelig ændre din booking online.
         .col-md-4.flat-service.md-margin-bottom-50
-          =image_tag 'icons/flat/02.png', class: 'image-md margin-bottom-20'
+          i.icon-custom.icon-lg.icon-bg-purple.fa.fa-thumbs-o-up.rounded-x
           h2.title-v3-md.margin-bottom-10 Få klaret rengøring
           p Vores hero kommer ud til dig og klarer rengøringen. Alle heroes er forsikrede, og er blevet baggrundstjekket.
         .col-md-4.flat-service
-          =image_tag 'icons/flat/03.png', class: 'image-md margin-bottom-20'
+          i.icon-custom.icon-lg.icon-bg-yellow.fa.fa-coffee.rounded-x
           h2.title-v3-md.margin-bottom-10 Slap af
-          p Slap af imens, eller brug din tid på det du holder af.
-    .bg-image-v1.parallaxBg.margin-bottom-60
-      .container
-        .headline-center.headline-light
-          h2 100% sikkerhed
-          p
-            | Vores heroes er både forsikrede og deres baggrund er blevet verificeret af os. Du kan altid fange få fat på vores hotline.
-            br
-            | Skulle du ikke være tilfreds med rengøringen, kommer vi gratis os gør det om.
-    .container
-      .headline-center.margin-bottom-60
-        h2 Hvem er vi?
-        p Yet to come
+          p Du kan enten være hjemme imens vi gør rent, eller give os en kopi af nøglen, så din hero kan lukke sig selv ind.
+-content_for :end_extra
+  javascript:
+    $(".preform").on("ajax:success", function(){
+      $(".preform").animate({opacity:0});
+      $('.form-success').animate({opacity:1});
+    });
+    $('.preform .submit').click(function(){
+      ga('send', 'event', 'button', 'click', 'nav-buttons');
+    });
